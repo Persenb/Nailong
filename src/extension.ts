@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 
 export function activate({ subscriptions, extensionUri }: vscode.ExtensionContext) {
-  const statusTextArray = [`$(cat-idle)`, `$(cat-leftdown)`, `$(cat-rightdown)`];
+  const statusTextArray = [`$(nailong-idle)`, `$(nailong-leftdown)`, `$(nailong-rightdown)`];
   let currentIndex = 0;
   let leftWasLastDown = false;
   let lastStateBeforeReset = currentIndex;
@@ -38,7 +38,7 @@ export function activate({ subscriptions, extensionUri }: vscode.ExtensionContex
   });
 
   // Command to toggle the status bar visibility
-  const toggleStatusBarCommand = vscode.commands.registerCommand('extension.toggleStatusBar', () => {
+  const toggleStatusBarCommand = vscode.commands.registerCommand('nailong.toggleStatusBar', () => {
     statusBarVisible = !statusBarVisible;
     if (statusBarVisible) {
       statusBarItem.show();

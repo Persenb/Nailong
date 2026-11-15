@@ -1,6 +1,6 @@
 """Generate the README demo GIF from the built icon font.
 
-Prerequisite: run build_font.py first (assets/build/bongocat.woff).
+Prerequisite: run build_font.py first (assets/build/nailong.woff).
 Output: assets/demo.gif (tracked) and assets/demo_preview.png (ignored).
 """
 import os
@@ -8,7 +8,7 @@ import os
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-FONT = os.path.join(ROOT, "assets", "build", "bongocat.woff")
+FONT = os.path.join(ROOT, "assets", "build", "nailong.woff")
 OUT_GIF = os.path.join(ROOT, "assets", "demo.gif")
 OUT_PREVIEW = os.path.join(ROOT, "assets", "demo_preview.png")
 

@@ -10,7 +10,7 @@ import xml.etree.ElementTree as ET
 ET.register_namespace("", "http://www.w3.org/2000/svg")
 NS = "{http://www.w3.org/2000/svg}"
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-SRC = os.path.join(ROOT, "assets", "src", "source")
+SRC = os.path.join(ROOT, "assets", "build", "normalized")
 DST = os.path.join(ROOT, "assets", "build", "thick")
 STROKE_WIDTH = 15
 

@@ -8,7 +8,7 @@ from fontTools.svgLib.path import parse_path
 ET.register_namespace("", "http://www.w3.org/2000/svg")
 NS = "{http://www.w3.org/2000/svg}"
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-DIR = os.path.join(ROOT, "assets", "src")
+DIR = os.path.join(ROOT, "assets", "frames")
 MARGIN = 20
 NAMES = ["idle", "left-down", "right-down"]
 

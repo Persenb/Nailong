@@ -1,9 +1,16 @@
-# Change Log
+# Changelog
 
-All notable changes to the "BongoCat" extension will be documented in this file.
+All notable changes to this extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/).
 
-## [Unreleased]
+## [0.0.1] - 2026-11-16
 
-- Initial release
+### Added
+
+- Custom Nailong icon font with idle, left-paw-down, and right-paw-down frames.
+- Typing animation in the VS Code status bar.
+- `Toggle Nailong` command to hide or show the status bar item.
+- Optional "Nailong Icons" product icon theme.
+- README preview GIFs.

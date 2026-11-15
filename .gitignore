@@ -15,9 +15,9 @@ dadsad.txt
 
 # Generated build intermediates
 assets/build/thick/
-assets/src/source/
-assets/build/bongocat.ttf
-assets/build/bongocat.woff
+assets/build/normalized/
+assets/build/nailong.ttf
+assets/build/nailong.woff
 *.ttx
 
 # OS / editor noise

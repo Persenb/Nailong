@@ -78,7 +78,7 @@
   <h1>奶龙 · 状态栏图标预览</h1>
   <p class="hint">
     把 <code>idle.svg</code>、<code>left-down.svg</code>、<code>right-down.svg</code> 放到
-    <code>assets/src/</code> 后刷新本页。<br>
+    <code>assets/frames/</code> 后刷新本页。<br>
     16px 是 VS Code 状态栏里的实际高度；深色栏里的白色是用 CSS 反色模拟的，实际由 VS Code 按主题前景色给图标上色。
   </p>
 
@@ -87,12 +87,12 @@
     <div class="bars">
       <div class="bar light">
         <span class="label">浅色状态栏</span>
-        <img src="src/idle.svg" alt="idle" onerror="this.classList.add('missing')">
+        <img src="frames/idle.svg" alt="idle" onerror="this.classList.add('missing')">
         <span class="text">0 ▲ 0</span>
       </div>
       <div class="bar dark">
         <span class="label">深色状态栏</span>
-        <img src="src/idle.svg" alt="idle" onerror="this.classList.add('missing')">
+        <img src="frames/idle.svg" alt="idle" onerror="this.classList.add('missing')">
         <span class="text">0 ▲ 0</span>
       </div>
     </div>
@@ -103,15 +103,15 @@
     <h2>2. 三帧对比（放大）</h2>
     <div class="grid">
       <figure>
-        <a href="src/idle.svg" target="_blank"><div class="stage light"><img src="src/idle.svg" alt="idle" onerror="this.classList.add('missing')"></div></a>
+        <a href="frames/idle.svg" target="_blank"><div class="stage light"><img src="frames/idle.svg" alt="idle" onerror="this.classList.add('missing')"></div></a>
         <figcaption>idle.svg</figcaption>
       </figure>
       <figure>
-        <a href="src/left-down.svg" target="_blank"><div class="stage light"><img src="src/left-down.svg" alt="left-down" onerror="this.classList.add('missing')"></div></a>
+        <a href="frames/left-down.svg" target="_blank"><div class="stage light"><img src="frames/left-down.svg" alt="left-down" onerror="this.classList.add('missing')"></div></a>
         <figcaption>left-down.svg</figcaption>
       </figure>
       <figure>
-        <a href="src/right-down.svg" target="_blank"><div class="stage light"><img src="src/right-down.svg" alt="right-down" onerror="this.classList.add('missing')"></div></a>
+        <a href="frames/right-down.svg" target="_blank"><div class="stage light"><img src="frames/right-down.svg" alt="right-down" onerror="this.classList.add('missing')"></div></a>
         <figcaption>right-down.svg</figcaption>
       </figure>
     </div>
@@ -121,8 +121,8 @@
   <section>
     <h2>3. 动画预览（模拟打字时切帧）</h2>
     <div class="anim-wrap">
-      <div class="stage light"><img id="animLight" src="src/idle.svg" alt="animation" onerror="this.classList.add('missing')"></div>
-      <div class="stage dark"><img id="animDark" src="src/idle.svg" alt="animation" onerror="this.classList.add('missing')"></div>
+      <div class="stage light"><img id="animLight" src="frames/idle.svg" alt="animation" onerror="this.classList.add('missing')"></div>
+      <div class="stage dark"><img id="animDark" src="frames/idle.svg" alt="animation" onerror="this.classList.add('missing')"></div>
     </div>
     <div class="controls">
       <label><input type="checkbox" id="play" checked> 播放动画</label>
@@ -133,16 +133,16 @@
   <section>
     <h2>4. 尺寸检查</h2>
     <div class="grid sizes">
-      <figure><img src="src/idle.svg" style="height:16px" onerror="this.classList.add('missing')"><span>16px</span></figure>
-      <figure><img src="src/idle.svg" style="height:24px" onerror="this.classList.add('missing')"><span>24px</span></figure>
-      <figure><img src="src/idle.svg" style="height:32px" onerror="this.classList.add('missing')"><span>32px</span></figure>
-      <figure><img src="src/idle.svg" style="height:48px" onerror="this.classList.add('missing')"><span>48px</span></figure>
-      <figure><img src="src/idle.svg" style="height:64px" onerror="this.classList.add('missing')"><span>64px</span></figure>
+      <figure><img src="frames/idle.svg" style="height:16px" onerror="this.classList.add('missing')"><span>16px</span></figure>
+      <figure><img src="frames/idle.svg" style="height:24px" onerror="this.classList.add('missing')"><span>24px</span></figure>
+      <figure><img src="frames/idle.svg" style="height:32px" onerror="this.classList.add('missing')"><span>32px</span></figure>
+      <figure><img src="frames/idle.svg" style="height:48px" onerror="this.classList.add('missing')"><span>48px</span></figure>
+      <figure><img src="frames/idle.svg" style="height:64px" onerror="this.classList.add('missing')"><span>64px</span></figure>
     </div>
   </section>
 
 <script>
-  const frames = ['src/idle.svg', 'src/left-down.svg', 'src/right-down.svg'];
+  const frames = ['frames/idle.svg', 'frames/left-down.svg', 'frames/right-down.svg'];
   const light = document.getElementById('animLight');
   const dark = document.getElementById('animDark');
   const play = document.getElementById('play');

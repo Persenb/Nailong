@@ -11,6 +11,16 @@ vsc-extension-quickstart.md
 **/.eslintrc.json
 **/*.map
 **/*.ts
-assets/**
+
+# Local scratch, source-only assets, build intermediates
 .render/**
-bongocat.ttx
+assets/build/**
+assets/source/**
+assets/frames/**
+assets/preview.html
+assets/demo_preview.png
+dadsad.txt
+nailong.ttx
+package-lock.json
+
+# Keep assets/demo.gif and assets/real_demo.gif for the README

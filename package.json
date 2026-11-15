@@ -1,9 +1,10 @@
 {
-  "name": "BongoCat",
+  "name": "nailong",
   "displayName": "Nailong",
-  "description": "Adds a tiny Nailong to your status bar",
-  "publisher": "pixl-garden",
+  "description": "Adds a tiny, unofficial Nailong to your status bar",
+  "publisher": "Persenb",
   "version": "0.0.1",
+  "license": "MIT",
   "icon": "logo.png",
   "engines": {
     "vscode": "^1.80.0"
@@ -11,6 +12,10 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Persenb/Nailong"
+  },
+  "homepage": "https://github.com/Persenb/Nailong#readme",
+  "bugs": {
+    "url": "https://github.com/Persenb/Nailong/issues"
   },
   "categories": [
     "Other"
@@ -24,42 +29,42 @@
     "cute"
   ],
   "activationEvents": [
-    "*"
+    "onStartupFinished"
   ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "extension.toggleStatusBar",
+        "command": "nailong.toggleStatusBar",
         "title": "Toggle Nailong"
       }
     ],
     "productIconThemes": [
       {
-        "id": "bongocat",
+        "id": "nailong",
         "label": "Nailong Icons",
-        "path": "./bongocat-theme.json"
+        "path": "./nailong-theme.json"
       }
     ],
     "icons": {
-      "cat-idle": {
+      "nailong-idle": {
         "description": "Nailong idle",
         "default": {
-          "fontPath": "./bongocat.woff",
+          "fontPath": "./nailong.woff",
           "fontCharacter": "\\e900"
         }
       },
-      "cat-leftdown": {
+      "nailong-leftdown": {
         "description": "Nailong left paw down",
         "default": {
-          "fontPath": "./bongocat.woff",
+          "fontPath": "./nailong.woff",
           "fontCharacter": "\\e901"
         }
       },
-      "cat-rightdown": {
+      "nailong-rightdown": {
         "description": "Nailong right paw down",
         "default": {
-          "fontPath": "./bongocat.woff",
+          "fontPath": "./nailong.woff",
           "fontCharacter": "\\e902"
         }
       }

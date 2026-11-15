@@ -15,8 +15,8 @@ from fontTools.svgLib.path import parse_path
 NS = "{http://www.w3.org/2000/svg}"
 ET.register_namespace("", "http://www.w3.org/2000/svg")
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-SRC = ROOT
-OUT = os.path.join(ROOT, "assets", "src", "source")
+SRC = os.path.join(ROOT, "assets", "source")
+OUT = os.path.join(ROOT, "assets", "build", "normalized")
 os.makedirs(OUT, exist_ok=True)
 
 # paw_box: subpaths to translate (the action paw). mark_box: tiny motion lines
@@ -24,13 +24,13 @@ os.makedirs(OUT, exist_ok=True)
 MOUTH_D = "M538 414 Q563 436 588 414"
 
 SPECS = {
-    "left_down.svg": {
+    "left-down.svg": {
         "paw_box": (415, 405, 560, 490),
         "paw_delta": (18, 28),
         "mark_box": (400, 465, 565, 505),
         "dots": [(468, 510), (500, 513), (532, 516)],
     },
-    "right_down.svg": {
+    "right-down.svg": {
         "paw_box": (660, 440, 745, 490),
         "paw_delta": (-60, 20),
         "mark_box": (715, 485, 785, 510),
@@ -170,5 +170,5 @@ def process(fn, out_name):
 
 
 process("idle.svg", "idle.svg")
-process("left_down.svg", "left-down.svg")
-process("right_down.svg", "right-down.svg")
+process("left-down.svg", "left-down.svg")
+process("right-down.svg", "right-down.svg")

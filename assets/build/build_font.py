@@ -21,7 +21,7 @@ from fontTools.svgLib.path import parse_path
 
 NS = "{http://www.w3.org/2000/svg}"
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-SRC = os.path.join(ROOT, "assets", "src")
+SRC = os.path.join(ROOT, "assets", "frames")
 OUT_DIR = os.path.join(ROOT, "assets", "build")
 os.makedirs(OUT_DIR, exist_ok=True)
 
@@ -196,10 +196,10 @@ fb.setupPost()
 
 font = fb.font
 font.flavor = None
-ttf_path = os.path.join(OUT_DIR, "bongocat.ttf")
+ttf_path = os.path.join(OUT_DIR, "nailong.ttf")
 font.save(ttf_path)
 font.flavor = "woff"
-woff_path = os.path.join(OUT_DIR, "bongocat.woff")
+woff_path = os.path.join(OUT_DIR, "nailong.woff")
 font.save(woff_path)
 print("wrote", ttf_path)
 print("wrote", woff_path)

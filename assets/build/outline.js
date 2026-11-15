@@ -6,7 +6,7 @@ const outlineStroke = require('svg-outline-stroke');
 
 const root = path.resolve(__dirname, '..', '..');
 const inDir = path.join(root, 'assets', 'build', 'thick');
-const outDir = path.join(root, 'assets', 'src');
+const outDir = path.join(root, 'assets', 'frames');
 
 (async () => {
   for (const name of ['idle', 'left-down', 'right-down']) {
