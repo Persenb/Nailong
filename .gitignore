@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+out/
+*.vsix
+
+# Test artifacts
+.vscode-test/
+
+# Local scratch / previews
+dadsad.txt
+.render/
+
+# Generated build intermediates
+assets/build/thick/
+assets/src/source/
+assets/build/bongocat.ttf
+assets/build/bongocat.woff
+*.ttx
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.log

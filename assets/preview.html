@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>奶龙状态栏图标预览</title>
+<style>
+  :root {
+    --line: #d0d0d0;
+    --bg: #fafafa;
+    --fg: #202020;
+    --muted: #777;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px;
+    font-family: "Segoe UI", "Microsoft YaHei", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+  }
+  h1 { font-size: 22px; margin: 0 0 6px; }
+  h2 { font-size: 15px; margin: 0 0 14px; font-weight: 600; }
+  .hint { color: var(--muted); font-size: 13px; margin: 0 0 28px; line-height: 1.6; }
+  section {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .bars { display: flex; flex-direction: column; gap: 10px; }
+  .bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 24px;
+    padding: 0 10px;
+    border-radius: 3px;
+    width: 320px;
+    font-size: 12px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+  }
+  .bar.light { background: #f3f3f3; color: #333; }
+  .bar.dark  { background: #181818; color: #f0f0f0; }
+  .bar .label { opacity: .6; margin-right: auto; }
+  .bar img { height: 16px; width: auto; display: block; }
+  .bar.dark img { filter: invert(1); }
+  .bar .text { opacity: .85; }
+  .grid { display: flex; flex-wrap: wrap; gap: 18px; }
+  figure { margin: 0; text-align: center; }
+  figure a { display: block; }
+  .stage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 16px;
+    min-width: 140px;
+    min-height: 100px;
+  }
+  .stage.light { background: #f3f3f3; }
+  .stage.dark  { background: #181818; }
+  .stage img { display: block; height: 64px; width: auto; }
+  .stage.dark img { filter: invert(1); }
+  figcaption { margin-top: 8px; font-size: 12px; color: var(--muted); }
+  .anim-wrap { display: flex; gap: 18px; flex-wrap: wrap; }
+  .anim-wrap .stage img { height: 72px; }
+  .controls { margin-top: 14px; font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 14px; }
+  .sizes { align-items: flex-end; gap: 28px; color: var(--muted); font-size: 12px; }
+  .sizes figure { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .sizes img { display: block; width: auto; }
+  .missing { outline: 1px dashed #e06c75; opacity: .35; }
+  .note { color: var(--muted); font-size: 12px; line-height: 1.6; margin-top: 10px; }
+</style>
+</head>
+<body>
+  <h1>奶龙 · 状态栏图标预览</h1>
+  <p class="hint">
+    把 <code>idle.svg</code>、<code>left-down.svg</code>、<code>right-down.svg</code> 放到
+    <code>assets/src/</code> 后刷新本页。<br>
+    16px 是 VS Code 状态栏里的实际高度；深色栏里的白色是用 CSS 反色模拟的，实际由 VS Code 按主题前景色给图标上色。
+  </p>
+
+  <section>
+    <h2>1. 实际尺寸（模拟状态栏）</h2>
+    <div class="bars">
+      <div class="bar light">
+        <span class="label">浅色状态栏</span>
+        <img src="src/idle.svg" alt="idle" onerror="this.classList.add('missing')">
+        <span class="text">0 ▲ 0</span>
+      </div>
+      <div class="bar dark">
+        <span class="label">深色状态栏</span>
+        <img src="src/idle.svg" alt="idle" onerror="this.classList.add('missing')">
+        <span class="text">0 ▲ 0</span>
+      </div>
+    </div>
+    <p class="note">如果这里看着糊成一团，说明线条需要加粗或细节需要减少。</p>
+  </section>
+
+  <section>
+    <h2>2. 三帧对比（放大）</h2>
+    <div class="grid">
+      <figure>
+        <a href="src/idle.svg" target="_blank"><div class="stage light"><img src="src/idle.svg" alt="idle" onerror="this.classList.add('missing')"></div></a>
+        <figcaption>idle.svg</figcaption>
+      </figure>
+      <figure>
+        <a href="src/left-down.svg" target="_blank"><div class="stage light"><img src="src/left-down.svg" alt="left-down" onerror="this.classList.add('missing')"></div></a>
+        <figcaption>left-down.svg</figcaption>
+      </figure>
+      <figure>
+        <a href="src/right-down.svg" target="_blank"><div class="stage light"><img src="src/right-down.svg" alt="right-down" onerror="this.classList.add('missing')"></div></a>
+        <figcaption>right-down.svg</figcaption>
+      </figure>
+    </div>
+    <p class="note">点击图片可以在新标签页里单独打开 SVG。</p>
+  </section>
+
+  <section>
+    <h2>3. 动画预览（模拟打字时切帧）</h2>
+    <div class="anim-wrap">
+      <div class="stage light"><img id="animLight" src="src/idle.svg" alt="animation" onerror="this.classList.add('missing')"></div>
+      <div class="stage dark"><img id="animDark" src="src/idle.svg" alt="animation" onerror="this.classList.add('missing')"></div>
+    </div>
+    <div class="controls">
+      <label><input type="checkbox" id="play" checked> 播放动画</label>
+      <span>深色那一帧已自动反色</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>4. 尺寸检查</h2>
+    <div class="grid sizes">
+      <figure><img src="src/idle.svg" style="height:16px" onerror="this.classList.add('missing')"><span>16px</span></figure>
+      <figure><img src="src/idle.svg" style="height:24px" onerror="this.classList.add('missing')"><span>24px</span></figure>
+      <figure><img src="src/idle.svg" style="height:32px" onerror="this.classList.add('missing')"><span>32px</span></figure>
+      <figure><img src="src/idle.svg" style="height:48px" onerror="this.classList.add('missing')"><span>48px</span></figure>
+      <figure><img src="src/idle.svg" style="height:64px" onerror="this.classList.add('missing')"><span>64px</span></figure>
+    </div>
+  </section>
+
+<script>
+  const frames = ['src/idle.svg', 'src/left-down.svg', 'src/right-down.svg'];
+  const light = document.getElementById('animLight');
+  const dark = document.getElementById('animDark');
+  const play = document.getElementById('play');
+  let index = 0;
+
+  setInterval(() => {
+    if (!play.checked) return;
+    index = (index + 1) % frames.length;
+    light.src = frames[index];
+    dark.src = frames[index];
+  }, 300);
+</script>
+</body>
+</html>

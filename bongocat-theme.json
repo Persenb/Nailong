@@ -1,0 +1,26 @@
+{
+	"fonts": [
+		{
+			"id": "nailong",
+			"src": [
+				{
+					"path": "./bongocat.woff",
+					"format": "woff"
+				}
+			],
+			"weight": "normal",
+			"style": "normal"
+		}
+	],
+	"iconDefinitions": {
+		"cat-idle": {
+			"fontCharacter": "\\e900"
+		},
+		"cat-leftdown": {
+			"fontCharacter": "\\e901"
+		},
+		"cat-rightdown": {
+			"fontCharacter": "\\e902"
+		}
+	}
+}
