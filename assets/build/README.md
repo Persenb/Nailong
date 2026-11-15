@@ -43,6 +43,9 @@ python assets/build/build_font.py
 
 # 7. 安装到插件
 cp assets/build/bongocat.woff bongocat.woff
+
+# 8. 生成 README 演示 GIF（可选）
+python assets/build/make_gif.py
 ```
 
 ## 可调参数

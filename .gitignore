@@ -24,3 +24,6 @@ assets/build/bongocat.woff
 .DS_Store
 Thumbs.db
 *.log
+
+# Generated README preview
+assets/demo_preview.png
