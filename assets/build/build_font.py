@@ -34,8 +34,10 @@ FRAMES = [
 UPEM = 1024
 ASCENT = 960
 DESCENT = -64
-TARGET_H = 920
-BOTTOM_PAD = 24
+# Fill the em height like the original icon font. The glyph may extend a
+# little below the descent, matching the original Bongo Cat font's extent.
+TARGET_H = 1200
+BOTTOM_PAD = -152
 SIDE_PAD = 48
 
 

@@ -35,8 +35,8 @@ python assets/build/make_gif.py
 ## 可调参数
 
 - `thicken.py` 的 `STROKE_WIDTH`：线条粗细。当前 15；改大更粗，改小更细。
-- `build_font.py` 的 `TARGET_H`：字形在 em 里占的高度，当前 920（1024 em）。
-- `build_font.py` 的 `SIDE_PAD` / `BOTTOM_PAD`：字形四周留白。
+- `build_font.py` 的 `TARGET_H`：字形在 em 里占的高度，当前 1200（1024 em，允许少量上下溢出以匹配状态栏高度）。
+- `build_font.py` 的 `SIDE_PAD` / `BOTTOM_PAD`：字形四周留白；当前 48 / -152。
 - `hollow_eyes.py` 的 `EYES`：左右眼的中心与椭圆半径；改大半径眼睛更空，改小则环更粗。
 - `prepare_frames.py` 的 `MOUTH_D`：面部嘴巴路径，当前为笑弧 `M538 414 Q563 436 588 414`。`Q` 的控制点越往下（y 越大）笑弧越深，放到端点上方会变成撇嘴；改端点可调长度和位置。
 - 码位在 `build_font.py` 的 `FRAMES` 列表里，需与 `nailong-theme.json` 保持一致。
